@@ -1,6 +1,77 @@
-/*==================================================
+/*======================================================
+DIVINE ALIGNMENT MINISTRIES™
+OFFICIAL DESIGN SYSTEM
+======================================================*/
+
+:root{
+
+    /*==============================================
+    BRAND COLORS
+    ==============================================*/
+
+    --royal-blue:#102B6A;
+    --midnight-blue:#061738;
+    --deep-blue:#0C2257;
+
+    --white:#FFFFFF;
+    --soft-white:#F5F7FA;
+    --light-gray:#CFCFCF;
+
+    /*==============================================
+    OFFICIAL METALLIC GOLD
+    ==============================================*/
+
+    --gold-dark:#8C6A0A;
+    --gold:#D4AF37;
+    --gold-light:#FFE98A;
+    --gold-highlight:#FFF7D8;
+    --gold-white:#FFFDF5;
+
+    --metallic-gold:linear-gradient(
+        180deg,
+        var(--gold-white) 0%,
+        var(--gold-highlight) 12%,
+        var(--gold-light) 24%,
+        var(--gold) 48%,
+        var(--gold-dark) 78%,
+        var(--gold-highlight) 100%
+    );
+
+    /*==============================================
+    TYPOGRAPHY
+    ==============================================*/
+
+    --font-family:Arial, Helvetica, sans-serif;
+
+    /*==============================================
+    SPACING
+    ==============================================*/
+
+    --section-spacing:100px;
+    --content-width:1400px;
+    --card-padding:40px;
+    --border-radius:20px;
+
+    /*==============================================
+    SHADOWS
+    ==============================================*/
+
+    --shadow-light:0 8px 20px rgba(0,0,0,.18);
+    --shadow-medium:0 15px 35px rgba(0,0,0,.25);
+    --shadow-heavy:0 20px 45px rgba(0,0,0,.35);
+
+    /*==============================================
+    TRANSITIONS
+    ==============================================*/
+
+    --transition:.35s ease;
+
+}
+
+
+/*======================================================
 RESET
-==================================================*/
+======================================================*/
 
 *{
 
@@ -18,101 +89,109 @@ html{
 
 body{
 
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:var(--font-family);
 
-    background:#081B4B;
+    background:var(--royal-blue);
 
-    color:#FFFFFF;
+    color:var(--white);
 
     overflow-x:hidden;
 
+    line-height:1.7;
+
 }
 
 
+/*======================================================
+GLOBAL
+======================================================*/
 
-/*==================================================
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+button{
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+}
+
+.container{
+
+    width:90%;
+
+    max-width:var(--content-width);
+
+    margin:0 auto;
+
+}
+/*======================================================
 HEADER
-==================================================*/
+======================================================*/
 
 header{
 
-    background: linear-gradient(
+    background:linear-gradient(
         180deg,
-        #0A2E73 0%,
-        #08265F 100%
+        var(--royal-blue) 0%,
+        var(--midnight-blue) 100%
     );
 
-    text-align: center;
+    text-align:center;
 
-    padding: 45px 20px 35px;
+    padding:40px 20px 25px;
 
-    border-bottom: 3px solid rgba(212,175,55,.35);
+    border-bottom:2px solid rgba(212,175,55,.30);
 
 }
-
-
-/*==================================================
-HEADER TITLE
-==================================================*/
 
 header h1{
 
-    background: linear-gradient(
-        180deg,
-        #FFFDF5 0%,
-        #FFF7D8 10%,
-        #FFE98A 22%,
-        #F4D35E 38%,
-        #D4AF37 50%,
-        #B8860B 68%,
-        #8C6A0A 82%,
-        #FFF4C8 100%
-    );
+    background:var(--metallic-gold);
 
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
 
-    font-size: 3.75rem;     /* 60px */
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-size:3.75rem;
 
-    margin-bottom: 15px;
+    font-weight:700;
 
-    text-shadow:
-        0 1px 0 rgba(255,255,255,.30),
-        0 2px 6px rgba(0,0,0,.35);
+    letter-spacing:1px;
+
+    margin-bottom:15px;
 
 }
 
+header .tagline{
 
+    color:rgba(255,255,255,.92);
 
+    font-size:1.25rem;
 
-/*==================================================
-HEADER TAGLINE
-==================================================*/
-
-header p{
-
-    color: rgba(255,255,255,.92);
-
-    font-size: 1.35rem;      /* approximately 22px */
-
-    font-weight: 300;
-
-    letter-spacing: 1.5px;
-
-    margin-top: 8px;
+    letter-spacing:1px;
 
 }
 
-/*==================================================
+/*======================================================
 NAVIGATION
-==================================================*/
+======================================================*/
 
 nav{
 
-    background:#051533;
+    background:var(--midnight-blue);
 
     display:flex;
 
@@ -122,13 +201,9 @@ nav{
 
     flex-wrap:wrap;
 
-    gap:32px;
+    gap:30px;
 
-    padding:18px 30px;
-
-    border-top:1px solid rgba(255,255,255,.08);
-
-    border-bottom:1px solid rgba(212,175,55,.20);
+   padding:15px 30px;
 
     position:sticky;
 
@@ -136,35 +211,25 @@ nav{
 
     z-index:1000;
 
-}
+    border-bottom:1px solid rgba(212,175,55,.20);
 
-/*==================================================
-NAVIGATION LINKS
-==================================================*/
+}
 
 nav a{
 
-    color:#FFFFFF;
-
-    text-decoration:none;
-
-    font-size:1rem;
+    color:var(--white);
 
     font-weight:600;
 
-    letter-spacing:.5px;
-
-    padding:8px 0;
-
     position:relative;
 
-    transition:all .3s ease;
+    transition:var(--transition);
 
 }
 
 nav a:hover{
 
-    color:#F4D35E;
+    color:var(--gold-light);
 
 }
 
@@ -182,23 +247,15 @@ nav a::after{
 
     height:3px;
 
-    background:linear-gradient(
-        90deg,
-        #8C6A0A,
-        #FFF9D6,
-        #D4AF37,
-        #FFF9D6,
-        #8C6A0A
-    );
+    background:var(--metallic-gold);
 
     transform:translateX(-50%);
 
-    transition:width .35s ease;
+    transition:var(--transition);
 
-    border-radius:10px;
+    border-radius:20px;
 
 }
-
 
 nav a:hover::after{
 
@@ -206,27 +263,1100 @@ nav a:hover::after{
 
 }
 
+/*======================================================
+BUTTONS
+======================================================*/
 
-/*==================================================
-HERO
-==================================================*/
+.primary-button{
 
-.hero{
+    background:var(--metallic-gold);
 
-    background-image:
-        linear-gradient(
-            rgba(0,0,0,.50),
-            rgba(0,0,0,.50)
-        ),
-        url("images/banner.png");
+    color:var(--midnight-blue);
 
-    background-size:cover;
+    border:none;
 
-    background-position:center center;
+    padding:16px 36px;
 
-    background-repeat:no-repeat;
+    border-radius:50px;
 
-    min-height:650px;
+    font-size:1rem;
+
+    font-weight:700;
+
+    transition:var(--transition);
+
+}
+
+.primary-button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-medium);
+
+}
+
+.secondary-button{
+
+    background:transparent;
+
+    color:var(--white);
+
+    border:2px solid var(--gold);
+
+    padding:16px 36px;
+
+    border-radius:50px;
+
+    font-size:1rem;
+
+    transition:var(--transition);
+
+}
+
+.secondary-button:hover{
+
+    background:var(--metallic-gold);
+
+    color:var(--midnight-blue);
+
+}
+/*======================================================
+MEDIA HERO
+======================================================*/
+
+.media-hero{
+
+    text-align:center;
+
+    padding:90px 30px 70px;
+
+}
+
+.hero-content{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+}
+
+.hero-kicker{
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    font-size:.9rem;
+
+    margin-bottom:18px;
+
+    font-weight:700;
+
+}
+
+.hero-title{
+
+    font-size:4.4rem;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+    background:var(--metallic-gold);
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+}
+
+.hero-subtitle{
+
+    color:rgba(255,255,255,.90);
+
+    font-size:1.25rem;
+
+    line-height:1.9;
+
+    max-width:760px;
+
+    margin:0 auto 45px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    margin-top:55px;
+
+}
+
+
+
+/*======================================================
+MEDIA NAVIGATION
+======================================================*/
+
+.media-navigation{
+
+    max-width:1400px;
+
+    margin:50px auto 100px;
+
+    padding:0 30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.media-tab{
+
+    background:rgba(255,255,255,.05);
+
+    color:var(--white);
+
+    border:1px solid var(--gold);
+
+    border-radius:50px;
+
+    padding:15px 28px;
+
+    transition:var(--transition);
+
+    font-weight:600;
+
+}
+
+.media-tab:hover{
+
+    background:var(--metallic-gold);
+
+    color:var(--midnight-blue);
+
+    transform:translateY(-3px);
+
+}
+
+.media-tab.active{
+
+    background:var(--metallic-gold);
+
+    color:var(--midnight-blue);
+
+}
+/*======================================================
+FEATURED CONTENT
+======================================================*/
+
+.featured-section{
+
+    max-width:1400px;
+
+   margin:80px auto 100px;
+
+    padding:0 30px;
+
+    display:grid;
+
+    grid-template-columns:360px 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.featured-image{
+
+    position:relative;
+
+}
+
+.featured-image img{
+
+    width:100%;
+
+    border-radius:25px;
+
+   border:2px solid var(--gold);
+
+    box-shadow:var(--shadow-heavy);
+
+    transition:var(--transition);
+
+}
+
+.featured-image img:hover{
+
+    transform:scale(1.02);
+
+}
+
+.featured-details{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.featured-label{
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.featured-details h2{
+
+    font-size:3rem;
+
+    line-height:1.2;
+
+    margin-bottom:15px;
+
+    background:var(--metallic-gold);
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+}
+
+.featured-details h3{
+
+    color:var(--gold);
+
+    font-size:1.4rem;
+
+    font-weight:500;
+
+    margin-bottom:30px;
+
+}
+
+.featured-details p{
+
+    color:rgba(255,255,255,.88);
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    max-width:700px;
+
+}
+
+.featured-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+}
+
+@media(max-width:1000px){
+
+    .featured-section{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .featured-details{
+
+        align-items:center;
+
+    }
+
+}
+/*======================================================
+MEDIA CONSOLE
+======================================================*/
+
+.media-console{
+
+    max-width:1400px;
+
+    margin:0 auto 100px;
+
+    padding:0 30px;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:40px;
+
+    align-items:start;
+
+}
+
+@media(max-width:1100px){
+
+    .media-console{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+/*======================================================
+MEDIA PLAYER
+======================================================*/
+
+.player-section{
+
+    margin:0;
+
+    padding:0;
+
+}
+
+.media-player{
+
+    background:#091B42;
+
+    border:1px solid rgba(212,175,55,.30);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    display:grid;
+
+    grid-template-columns:350px 1fr;
+
+    gap:50px;
+
+    align-items:center;
+
+    box-shadow:var(--shadow-medium);
+
+}
+
+.media-cover img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    border:2px solid var(--gold);
+
+}
+
+.media-information{
+
+    color:var(--white);
+
+}
+
+.player-label{
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    font-size:.85rem;
+
+    margin-bottom:15px;
+
+}
+
+.media-information h2{
+
+    font-size:3rem;
+
+    margin-bottom:10px;
+
+}
+
+.media-information h3{
+
+    color:var(--gold);
+
+    font-size:1.3rem;
+
+    font-weight:400;
+
+    margin-bottom:35px;
+
+}
+
+.media-controls{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin:35px 0;
+
+}
+
+.media-controls button{
+
+    background:var(--metallic-gold);
+
+    color:var(--midnight-blue);
+
+    border:none;
+
+    border-radius:50px;
+
+    padding:14px 28px;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    transition:var(--transition);
+
+}
+
+.media-controls button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-medium);
+
+}
+
+.progress-container{
+
+    width:100%;
+
+}
+
+.progress-bar{
+
+    width:100%;
+
+    height:8px;
+
+    background:#20365D;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+.progress-fill{
+
+    width:35%;
+
+    height:100%;
+
+    background:var(--metallic-gold);
+
+}
+
+@media(max-width:1000px){
+
+    .media-player{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .media-controls{
+
+        justify-content:center;
+
+    }
+
+}
+/*======================================================
+PLAYLIST
+======================================================*/
+
+.playlist-section{
+
+    margin:0;
+
+    padding:0;
+
+}
+
+.playlist{
+
+    background:#091B42;
+
+    border:1px solid rgba(212,175,55,.30);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-medium);
+
+}
+
+.playlist-header{
+
+    padding:30px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.playlist-header h2{
+
+    color:var(--white);
+
+    font-size:2rem;
+
+    margin-bottom:8px;
+
+}
+
+.playlist-header p{
+
+    color:rgba(255,255,255,.70);
+
+}
+
+.playlist-item{
+
+    display:grid;
+
+    grid-template-columns:60px 1fr 70px;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:22px 30px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:var(--transition);
+
+}
+
+.playlist-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.playlist-item:hover{
+
+    background:#12306C;
+
+    cursor:pointer;
+
+}
+
+.playlist-item.active{
+
+    background:#173A82;
+
+}
+
+.track-number{
+
+    color:var(--gold);
+
+    font-weight:700;
+
+    font-size:1.2rem;
+
+}
+
+.track-information h3{
+
+    color:var(--white);
+
+    margin-bottom:5px;
+
+}
+
+.track-information p{
+
+    color:rgba(255,255,255,.70);
+
+}
+
+.track-time{
+
+    color:var(--gold);
+
+    text-align:right;
+
+    font-weight:700;
+
+}
+
+@media(max-width:1000px){
+
+    .playlist-item{
+
+        grid-template-columns:45px 1fr;
+
+    }
+
+    .track-time{
+
+        display:none;
+
+    }
+
+}
+/*======================================================
+FOOTER
+======================================================*/
+
+footer{
+
+    margin-top:100px;
+
+    background:linear-gradient(
+        180deg,
+        var(--midnight-blue),
+        #04112A
+    );
+
+    border-top:2px solid var(--gold);
+
+    padding:60px 30px 40px;
+
+}
+
+.footer-bottom{
+
+    max-width:1400px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+.footer-bottom p{
+
+    color:rgba(255,255,255,.80);
+
+    line-height:2;
+
+}
+
+.footer-bottom strong{
+
+    background:var(--metallic-gold);
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+}
+/*======================================================
+CONTENT SECTIONS
+======================================================*/
+
+.content-section{
+
+    max-width:1400px;
+
+    margin:100px auto;
+
+    padding:0 30px;
+
+}
+
+.section-header{
+
+    margin-bottom:50px;
+
+}
+
+.section-header h2{
+
+    font-size:3rem;
+
+    margin-top:10px;
+
+    margin-bottom:20px;
+
+    background:var(--metallic-gold);
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+}
+
+.card-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+.content-card{
+
+    background:#091B42;
+
+    border:1px solid rgba(212,175,55,.30);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    transition:.35s;
+
+}
+
+.content-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-medium);
+
+}
+
+.content-card h3{
+
+    color:var(--gold);
+
+    font-size:1.6rem;
+
+    margin-bottom:15px;
+
+}
+
+.content-card p{
+
+    color:rgba(255,255,255,.80);
+
+    line-height:1.8;
+
+}
+
+.video-container{
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    border:2px solid var(--gold);
+
+    box-shadow:var(--shadow-medium);
+
+}
+/*======================================================
+PLAYLIST
+======================================================*/
+
+.playlist-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:18px 20px;
+
+    margin-bottom:15px;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    border:1px solid transparent;
+
+}
+
+.playlist-item:hover{
+
+    background:#0D2358;
+
+    border-color:rgba(212,175,55,.35);
+
+}
+
+.playlist-item.active{
+
+    background:#102B6A;
+
+    border-color:var(--gold);
+
+}
+
+.track-number{
+
+    width:45px;
+
+    height:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:var(--metallic-gold);
+
+    color:#081B4B;
+
+    font-weight:bold;
+
+    flex-shrink:0;
+
+}
+
+.track-information{
+
+    flex:1;
+
+}
+
+.track-information h3{
+
+    color:white;
+
+    font-size:1rem;
+
+    margin-bottom:5px;
+
+}
+
+.track-information p{
+
+    color:#CFCFCF;
+
+    font-size:.9rem;
+
+}
+
+.track-time{
+
+    color:var(--gold);
+
+    font-size:1.2rem;
+
+}
+
+.progress-bar{
+
+    width:100%;
+
+    height:8px;
+
+    background:#29467F;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin-top:30px;
+
+}
+
+.progress-fill{
+
+    width:0%;
+
+    height:100%;
+
+    background:var(--metallic-gold);
+
+    transition:.1s;
+
+}
+/*======================================================
+ROTATING ALBUM COVER
+======================================================*/
+
+.media-cover img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:22px;
+
+    transition:.4s;
+
+}
+
+.media-cover img.playing{
+
+    animation:spinAlbum 20s linear infinite;
+
+}
+
+@keyframes spinAlbum{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+/*======================================================
+VOLUME
+======================================================*/
+
+.volume-container{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+#volumeSlider{
+
+    width:220px;
+
+    cursor:pointer;
+
+    accent-color:var(--gold);
+
+}
+/*======================================================
+TIME DISPLAY
+======================================================*/
+
+.time-display{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:var(--gold);
+
+    margin-bottom:10px;
+
+    font-size:.9rem;
+
+}
+/*======================================================
+HOME MINISTRY MEDALLIONS
+======================================================*/
+
+.ministries{
+
+    padding:100px 8%;
+
+}
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-heading h2{
+
+    color:white;
+
+    font-size:2.4rem;
+
+    margin-bottom:15px;
+
+}
+
+.section-heading p{
+
+    color:#CFCFCF;
+
+    font-size:1.05rem;
+
+}
+
+.ministry-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:55px;
+
+    justify-items:center;
+
+}
+
+.ministry-card{
+
+    width:230px;
+
+    height:230px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        180deg,
+        #163A82 0%,
+        #102B6A 55%,
+        #081B4B 100%
+    );
+
+    border:3px solid var(--gold);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.35),
+        inset 0 0 25px rgba(255,255,255,.04);
 
     display:flex;
 
@@ -238,1379 +1368,256 @@ HERO
 
     text-align:center;
 
-    padding:40px 20px;
+    cursor:pointer;
+
+    transition:.4s;
+
+    padding:25px;
 
 }
-
-/*==================================================
-HERO TITLE
-==================================================*/
-
-.hero h2{
-
-    background:linear-gradient(
-        180deg,
-        #FFFDF5 0%,
-        #FFF7D8 10%,
-        #FFE98A 22%,
-        #F4D35E 38%,
-        #D4AF37 50%,
-        #B8860B 68%,
-        #8C6A0A 82%,
-        #FFF4C8 100%
-    );
-
-    -webkit-background-clip:text;
-    background-clip:text;
-    -webkit-text-fill-color:transparent;
-
-    font-size:3rem;          /* 48px */
-    font-weight:700;
-    line-height:1.2;
-    letter-spacing:.5px;
-
-    margin-bottom:25px;
-
-    text-shadow:
-        0 2px 4px rgba(0,0,0,.45);
-
-}
-
-
-/*==================================================
-HERO TEXT
-==================================================*/
-
-.hero p{
-
-    color:rgba(255,255,255,.95);
-
-    font-size:1.375rem;      /* 22px */
-
-    font-weight:300;
-
-    max-width:900px;
-
-    margin:0 auto;
-
-    line-height:1.9;
-
-    letter-spacing:.3px;
-
-    text-shadow:
-        0 2px 4px rgba(0,0,0,.35);
-
-}
-
-/*==================================================
-FOOTER
-==================================================*/
-
-footer{
-
-    background:linear-gradient(
-        180deg,
-        #051533 0%,
-        #031024 100%
-    );
-
-    text-align:center;
-
-    padding:45px 25px;
-
-    margin-top:80px;
-
-    border-top:2px solid rgba(212,175,55,.25);
-
-}
-footer p{
-
-    color:rgba(255,255,255,.80);
-
-    font-size:.95rem;
-
-    line-height:1.8;
-
-    margin:8px 0;
-
-}
-footer a{
-
-    color:#FFFFFF;
-
-    text-decoration:none;
-
-    transition:all .3s ease;
-
-}
-
-footer a:hover{
-
-    color:#F4D35E;
-
-}
-
-/*==================================================
-WELCOME SECTION
-==================================================*/
-
-.welcome{
-
-    background:#FFFFFF;
-
-    color:#1F2937;
-
-    text-align:center;
-
-    padding:100px 30px;
-
-}
-
-/*==================================================
-WELCOME TITLE
-==================================================*/
-
-.welcome h2{
-
-    font-size:3rem;          /* 48px */
-
-    font-weight:700;
-
-    text-align:center;
-
-    margin-bottom:30px;
-
-    line-height:1.2;
-
-}
-
-
-
-/*==================================================
-WELCOME TEXT
-==================================================*/
-
-.welcome p{
-
-    max-width:900px;
-
-    margin:0 auto;
-
-    font-size:1.375rem;      /* 22px */
-
-    font-weight:300;
-
-    line-height:1.9;
-
-    letter-spacing:.3px;
-
-    color:#374151;
-
-}
-/*==================================================
-OUR MINISTRIES
-==================================================*/
-
-.ministries{
-
-    background:#F8FAFC;
-
-    padding:100px 30px;
-
-}
-
-/*==================================================
-SECTION HEADINGS
-==================================================*/
-
-.section-heading{
-
-    text-align:center;
-
-    max-width:850px;
-
-    margin:0 auto 70px;
-
-    padding:0 20px;
-
-}
-
-/*==================================================
-SECTION TITLE
-==================================================*/
-
-.section-heading h2{
-
-    font-size:3rem;
-
-    font-weight:700;
-
-    line-height:1.2;
-
-    letter-spacing:.5px;
-
-    margin-bottom:20px;
-
-}
-
-/*==================================================
-SECTION SUBTITLE
-==================================================*/
-
-.section-heading p{
-
-    color:#4B5563;
-
-    font-size:1.2rem;
-
-    font-weight:300;
-
-    line-height:1.9;
-
-    letter-spacing:.3px;
-
-    max-width:800px;
-
-    margin:0 auto;
-
-}
-
-
-/*==================================================
-MINISTRY GRID
-==================================================*/
-
-.ministry-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
-
-    gap:40px;
-
-    align-items:stretch;
-
-}
-
-/*==================================================
-MINISTRY CARD
-==================================================*/
-
-.ministry-card{
-
-    background:#FFFFFF;
-
-    border-radius:20px;
-
-    padding:40px;
-
-    text-decoration:none;
-
-    color:inherit;
-
-    display:flex;
-
-    flex-direction:column;
-
-    height:100%;
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,.08);
-
-    border-top:4px solid #D4AF37;
-
-    transition:
-        transform .35s ease,
-        box-shadow .35s ease,
-        border-color .35s ease;
-
-}
-
-
-
-/*==================================================
-MINISTRY CARD HOVER
-==================================================*/
 
 .ministry-card:hover{
 
     transform:translateY(-10px);
 
     box-shadow:
-        0 22px 50px rgba(0,0,0,.15);
-
-    border-top-color:#F4D35E;
-
-}
-
-
-
-/*==================================================
-MINISTRY ICON
-==================================================*/
-
-.icon{
-
-    font-size:3.25rem;
-
-    margin-bottom:25px;
-
-    display:inline-block;
-
-    color:#D4AF37;
-
-    transition:
-        transform .35s ease,
-        color .35s ease;
+        0 28px 50px rgba(0,0,0,.45),
+        0 0 25px rgba(212,175,55,.30);
 
 }
-
-/*==================================================
-MINISTRY CARD CONTENT
-==================================================*/
 
 .ministry-card h3{
 
-    color:#0A2E73;
+    color:white;
 
-    font-size:1.6rem;
+    font-size:1.15rem;
 
-    font-weight:700;
+    line-height:1.4;
 
-    margin-bottom:15px;
-
-    line-height:1.3;
+    margin-bottom:18px;
 
 }
 
-.ministry-card p{
+.cross{
 
-    color:#4B5563;
+    margin:18px 0;
 
-    font-size:1rem;
+}
 
-    line-height:1.8;
+.cross-icon{
 
-    margin-bottom:25px;
+    width:48px;
 
-    flex-grow:1;
+    height:48px;
+
+    fill:#C88F17;
+
+    filter:
+        drop-shadow(0 2px 3px rgba(0,0,0,.45))
+        drop-shadow(0 0 8px rgba(255,215,120,.25));
+
+    transition:
+        transform .45s ease,
+        filter .45s ease;
+
+}
+
+
+
+
+
+.ministry-card:hover .cross::after{
+
+    left:140%;
+
+    top:-40%;
+
+    opacity:1;
 
 }
 
 .ministry-card span{
 
-    display:inline-block;
+    color:var(--gold);
 
-    font-weight:700;
-
-    font-size:1rem;
-
-    color:#B8860B;
-
-    transition:
-        color .35s ease,
-        transform .35s ease;
-
-}
-
-
-/*==================================================
-CURRENT JOURNEY
-==================================================*/
-
-.journey{
-
-    background:linear-gradient(
-        180deg,
-        #0A2E73 0%,
-        #08265F 100%
-    );
-
-    color:#FFFFFF;
-
-    text-align:center;
-
-    padding:120px 30px;
-
-}
-
-.journey-content{
-
-    max-width:900px;
-
-    margin:0 auto;
-
-}
-
-.journey-label{
-
-    color:#D4AF37;
-
-    font-size:.9rem;
-
-    font-weight:700;
-
-    letter-spacing:4px;
-
-    text-transform:uppercase;
-
-    margin-bottom:20px;
-
-}
-
-.journey h2{
-
-    font-size:4rem;
-
-    font-weight:700;
-
-    line-height:1.2;
-
-    margin-bottom:20px;
-
-}
-
-.journey h3{
-
-    color:rgba(255,255,255,.92);
-
-    font-size:1.5rem;
-
-    font-weight:300;
-
-    margin-bottom:35px;
-
-}
-
-.journey-text{
-
-    font-size:1.25rem;
-
-    line-height:1.9;
-
-    color:rgba(255,255,255,.90);
-
-    margin-bottom:50px;
-
-}
-
-.journey-details{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:70px;
-
-    flex-wrap:wrap;
-
-    margin-bottom:60px;
-
-}
-
-.journey-button{
-
-    display:inline-block;
-
-    background:linear-gradient(
-        180deg,
-        #FFFDF5,
-        #FFE98A,
-        #D4AF37,
-        #B8860B
-    );
-
-    color:#081B4B;
-
-    text-decoration:none;
-
-    font-weight:700;
-
-    padding:18px 42px;
-
-    border-radius:50px;
-
-    transition:
-        transform .35s ease,
-        box-shadow .35s ease;
-
-    box-shadow:
-        0 10px 25px rgba(0,0,0,.20);
-
-}
-
-.journey-button:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:
-        0 18px 35px rgba(0,0,0,.28);
-
-}
-
-/*==================================================
-LEGAL & POLICIES
-==================================================*/
-
-.legal{
-
-    max-width:1100px;
-
-    margin:0 auto;
-
-    padding:100px 30px;
-
-    color:#374151;
-
-    line-height:1.9;
-
-}
-/*==================================================
-LEGAL PAGE TITLE
-==================================================*/
-
-.legal h2{
-
-    font-size:3rem;
-
-    font-weight:700;
-
-    text-align:center;
-
-    margin-bottom:50px;
-
-    line-height:1.2;
-
-}
-/*==================================================
-FOOTER
-==================================================*/
-
-footer{
-
-    background:linear-gradient(
-        180deg,
-        #071B49 0%,
-        #051533 100%
-    );
-
-    color:#FFFFFF;
-
-    border-top:3px solid #D4AF37;
-
-    padding:80px 30px 30px;
-
-}
-
-.footer-container{
-
-    max-width:1200px;
-
-    margin:0 auto;
-
-    display:grid;
-
-    grid-template-columns:2fr 1fr 1fr 1fr;
-
-    gap:60px;
-
-}
-
-.footer-brand{
-
-    padding-right:25px;
-
-}
-
-.footer-column h3,
-.footer-column h4{
-
-    color:#D4AF37;
-
-    font-size:1.2rem;
-
-    margin-bottom:20px;
-
-}
-
-.footer-tagline{
-
-    color:rgba(255,255,255,.90);
-
-    font-style:italic;
-
-    margin-bottom:20px;
-
-}
-
-.footer-mission{
-
-    color:rgba(255,255,255,.78);
-
-    line-height:1.9;
-
-    margin-bottom:30px;
-
-}
-
-.footer-column a{
-
-    display:block;
-
-    color:#FFFFFF;
-
-    text-decoration:none;
-
-    margin-bottom:12px;
-
-    transition:all .3s ease;
-
-}
-
-.footer-column a:hover{
-
-    color:#F4D35E;
-
-    transform:translateX(6px);
-
-}
-
-.social-links{
-
-    margin-top:25px;
-
-}
-
-/*==================================================
-FOOTER SOCIAL LINKS
-==================================================*/
-
-.social-links{
-
-    margin-top:30px;
-
-}
-
-.social-links a{
-
-    display:inline-block;
-
-    margin-right:18px;
-
-    color:#FFFFFF;
-
-    font-size:1.25rem;
-
-    transition:
-        transform .3s ease,
-        color .3s ease;
-
-}
-
-.social-links a:hover{
-
-    color:#F4D35E;
-
-    transform:translateY(-3px);
-
-}
-
-
-/*==================================================
-FOOTER BOTTOM
-==================================================*/
-
-.footer-bottom{
-
-    margin-top:60px;
-
-    padding-top:30px;
-
-    border-top:1px solid rgba(212,175,55,.20);
-
-    text-align:center;
-
-    color:rgba(255,255,255,.75);
-
-    font-size:.95rem;
-
-    line-height:1.8;
-
-}
-
-.footer-bottom strong{
-
-    color:#D4AF37;
-
-    font-weight:700;
-
-}
-/*==================================================
-PAGE BANNER
-==================================================*/
-
-.page-banner{
-
-    background:linear-gradient(
-        180deg,
-        #0A2E73 0%,
-        #08265F 100%
-    );
-
-    border-bottom:3px solid #D4AF37;
-
-    text-align:center;
-
-    padding:90px 30px;
-
-}
-
-.page-banner h1{
-
-    font-size:3.5rem;
-
-    font-weight:700;
-
-    line-height:1.2;
-
-    margin-bottom:15px;
-
-}
-
-.page-banner p{
-
-    color:rgba(255,255,255,.92);
-
-    font-size:1.35rem;
-
-    font-weight:300;
+    font-weight:600;
 
     letter-spacing:.5px;
 
-    max-width:850px;
-
-    margin:0 auto;
-
 }
+.cross-icon{
 
-/*==================================================
-LEGAL CONTENT
-==================================================*/
+    fill:#D4AF37;
 
-.legal-container{
-
-    max-width:1200px;
-
-    margin:80px auto;
-
-    padding:0 30px;
-
-}
-
-.legal-card{
-
-    background:#FFFFFF;
-
-    color:#374151;
-
-    padding:45px;
-
-    margin-bottom:40px;
-
-    border-radius:18px;
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,.08);
-
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease;
-
-}
-
-.legal-card:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.12);
-
-}
-
-.legal-card h2{
-
-    color:#0A2E73;
-
-    font-size:2rem;
-
-    font-weight:700;
-
-    margin-bottom:25px;
-
-    padding-left:20px;
-
-    border-left:5px solid #D4AF37;
-
-}
-
-.legal-card p{
-
-    color:#4B5563;
-
-    line-height:1.9;
-
-    margin-bottom:20px;
-
-}
-
-.legal-card ul{
-
-    margin-left:30px;
-
-    line-height:1.9;
-
-}
-
-.legal-card li{
-
-    color:#4B5563;
-
-    margin-bottom:12px;
-
-}
-
-
-
-/*==================================================
-ABOUT PAGE
-==================================================*/
-
-.story-container{
-
-    width:90%;
-
-    max-width:900px;
-
-    margin:100px auto;
-
-    padding:0 20px;
-
-}
-
-
-
-.story-section{
-
-    margin-bottom:90px;
-
-}
-
-.story-section h2{
-
-    text-align:center;
-
-    font-size:2.75rem;
-
-    font-weight:700;
-
-    margin-bottom:25px;
-
-}
-
-.story-section p{
-
-    color:rgba(255,255,255,.92);
-
-    font-size:1.3rem;
-
-    line-height:2.1;
-
-    margin-bottom:25px;
-
-}
-
-.story-section ul{
-
-    color:rgba(255,255,255,.92);
-
-    font-size:1.2rem;
-
-    line-height:2;
-
-    padding-left:30px;
-
-}
-
-.section-divider{
-
-    width:140px;
-
-    height:3px;
-
-    margin:70px auto;
-
-    background:linear-gradient(
-        90deg,
-        transparent,
-        #FFF9D6,
-        #D4AF37,
-        #FFF9D6,
-        transparent
-    );
-
-}
-/*==================================================
-FOUNDATION OF OUR FAITH
-==================================================*/
-
-.beliefs{
-
-    margin-top:50px;
-
-}
-
-.beliefs details{
-
-    background:rgba(255,255,255,.05);
-
-    border:1px solid rgba(212,175,55,.25);
-
-    border-radius:16px;
-
-    margin-bottom:18px;
-
-    overflow:hidden;
-
-    transition:.3s ease;
-
-}
-
-.beliefs details:hover{
-
-    border-color:#D4AF37;
-
-}
-
-.beliefs summary{
-
-    list-style:none;
-
-    cursor:pointer;
-
-    padding:22px 28px;
-
-    font-size:1.5rem;
-
-    font-weight:700;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-}
-
-.beliefs summary::-webkit-details-marker{
-
-    display:none;
-
-}
-
-.beliefs summary::after{
-
-    content:"+";
-
-    color:#D4AF37;
-
-    font-size:2rem;
-
-    font-weight:300;
-
-}
-
-.beliefs details[open] summary::after{
-
-    content:"−";
-
-}
-
-.beliefs details p{
-
-    padding:0 28px 28px;
-
-    color:rgba(255,255,255,.92);
-
-    line-height:2;
-
-}
-/*=====================================
-FOUNDATION OF OUR FAITH
-=====================================*/
-
-.beliefs{
-
-    margin-top:70px;
-
-}
-
-.belief-card{
-
-    background:#13366F;
-
-    border:1px solid rgba(212,175,55,.25);
-
-    border-radius:18px;
-
-    margin-bottom:28px;
-
-    overflow:hidden;
+    filter:
+        drop-shadow(0 2px 2px rgba(0,0,0,.45))
+        drop-shadow(0 0 6px rgba(255,215,100,.30));
 
     transition:.35s;
 
 }
 
-.belief-card:hover{
+.ministry-card:hover .cross-icon{
 
-    border-color:#D4AF37;
+    transform:scale(1.12);
 
-    box-shadow:0 10px 35px rgba(0,0,0,.25);
+    filter:
 
-}
-
-.belief-card[open]{
-
-    border-color:#D4AF37;
-
-    box-shadow:0 15px 45px rgba(0,0,0,.35);
+        drop-shadow(0 0 14px rgba(255,220,120,.75))
+        drop-shadow(0 0 22px rgba(255,200,80,.45));
 
 }
+/*======================================================
+MINISTRY MODAL
+======================================================*/
 
-.belief-card summary{
+.ministry-modal{
 
-    list-style:none;
+    position:fixed;
 
-    cursor:pointer;
+    inset:0;
 
-    padding:30px;
+    background:rgba(0,0,0,.70);
 
-}
-
-.belief-card summary::-webkit-details-marker{
+    backdrop-filter:blur(8px);
 
     display:none;
 
-}
-
-.belief-header{
-
-    display:flex;
-
-    justify-content:space-between;
+    justify-content:center;
 
     align-items:center;
 
-}
-
-.belief-title{
-
-    font-size:2rem;
-
-    margin:0;
+    z-index:9999;
 
 }
 
-.belief-toggle{
+.modal-content{
+
+    width:min(90%,650px);
+
+    background:linear-gradient(
+        180deg,
+        #15387C,
+        #0B235B
+    );
+
+    border:2px solid var(--gold);
+
+    border-radius:30px;
+
+    padding:50px;
+
+    text-align:center;
+
+    position:relative;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.50);
+
+    animation:modalFade .35s ease;
+
+}
+
+@keyframes modalFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px) scale(.96);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+.close-modal{
+
+    position:absolute;
+
+    top:20px;
+
+    right:25px;
+
+    background:none;
+
+    border:none;
+
+    color:white;
 
     font-size:2rem;
 
-    color:#D4AF37;
+    cursor:pointer;
 
-    font-weight:300;
+}
+
+.modal-content h2{
+
+    color:white;
+
+    margin-bottom:20px;
+
+    font-size:2rem;
+
+}
+
+.modal-cross{
+
+    margin:25px 0;
+
+}
+
+.modal-cross .cross-icon{
+
+    width:65px;
+
+    height:65px;
+
+}
+
+#modalDescription{
+
+    color:#EAEAEA;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+    font-size:1.05rem;
+
+}
+
+.modal-button{
+
+    display:inline-block;
+
+    padding:15px 40px;
+
+    background:var(--metallic-gold);
+
+    color:#081B4B;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:bold;
 
     transition:.3s;
 
 }
 
-.belief-card[open] .belief-toggle{
-
-    transform:rotate(180deg);
-
-}
-
-.belief-card[open] .belief-toggle::before{
-
-    content:"−";
-
-}
-
-.belief-card:not([open]) .belief-toggle::before{
-
-    content:"+";
-
-}
-
-.belief-toggle{
-
-    color:transparent;
-
-}
-
-.belief-preview{
-
-    margin-top:18px;
-
-    font-size:1.2rem;
-
-    color:rgba(255,255,255,.9);
-
-}
-
-.belief-body{
-
-    padding:0 30px 35px;
-
-}
-
-.belief-body hr{
-
-    border:none;
-
-    height:1px;
-
-    background:linear-gradient(
-        to right,
-        transparent,
-        #D4AF37,
-        transparent
-    );
-
-    margin:0 0 35px;
-
-}
-
-.belief-body h4{
-
-    color:#D4AF37;
-
-    margin-bottom:18px;
-
-    font-size:1.2rem;
-
-}
-
-.belief-body p{
-
-    color:rgba(255,255,255,.92);
-
-    line-height:2;
-
-    margin-bottom:35px;
-
-}
-
-.scriptures{
-
-    list-style:none;
-
-    padding:0;
-
-    margin:0;
-
-}
-
-.scriptures li{
-
-    padding:12px 0;
-
-    border-bottom:1px solid rgba(255,255,255,.08);
-
-    color:white;
-
-}
-
-.scriptures li:last-child{
-
-    border-bottom:none;
-
-}
-/*==================================================
-DIVINE ALIGNMENT MINISTRIES™
-DESIGN SYSTEM
-==================================================*/
-
-:root{
-
-    /* Brand Colors */
-
-    --royal-blue:#0A2E73;
-    --midnight-blue:#051533;
-
-    --gold-light:#FFF7C2;
-    --gold:#D4AF37;
-    --gold-dark:#B8860B;
-
-    --white:#FFFFFF;
-    --off-white:#F8FAFC;
-
-    --text-dark:#374151;
-    --text-light:rgba(255,255,255,.92);
-
-}
-
-/*==========================
-PAGE WIDTH
-===========================*/
-
-.container{
-
-    width:90%;
-
-    max-width:1200px;
-
-    margin:0 auto;
-
-}
-
-/*==========================
-SECTION SPACING
-===========================*/
-
-section{
-
-    padding:90px 0;
-
-}
-
-/*==========================
-METALLIC GOLD TITLES
-===========================*/
-
-.gold-title{
-
-    background:linear-gradient(
-        180deg,
-        #FFFDF5 0%,
-        #FFF7D8 12%,
-        #FFE98A 28%,
-        #D4AF37 50%,
-        #B8860B 70%,
-        #8C6A0A 84%,
-        #FFF4C8 100%
-    );
-
-    -webkit-background-clip:text;
-    background-clip:text;
-
-    -webkit-text-fill-color:transparent;
-
-    font-weight:700;
-
-    text-shadow:
-        0 1px 1px rgba(255,255,255,.20),
-        0 3px 6px rgba(0,0,0,.35);
-
-}
-
-/*==========================
-SECTION TITLES
-===========================*/
-
-.section-title{
-
-    text-align:center;
-
-    font-size:3rem;
-
-    font-weight:700;
-
-    line-height:1.2;
-
-    margin-bottom:20px;
-
-}
-
-.section-subtitle{
-
-    text-align:center;
-
-    color:var(--text-light);
-
-    font-size:1.35rem;
-
-    font-weight:300;
-
-    line-height:1.8;
-
-    max-width:850px;
-
-    margin:0 auto 60px;
-
-}
-
-/*==========================
-DIVIDER
-===========================*/
-
-.section-divider{
-
-    width:140px;
-
-    height:4px;
-
-    background:linear-gradient(
-        90deg,
-        transparent,
-        var(--gold-light),
-        var(--gold),
-        var(--gold-light),
-        transparent
-    );
-
-    border-radius:10px;
-
-    margin:70px auto;
-
-}
-.button{
-
-    display:inline-block;
-
-    background:linear-gradient(
-        180deg,
-        var(--gold-light),
-        var(--gold),
-        var(--gold-dark)
-    );
-
-    color:var(--midnight-blue);
-
-    text-decoration:none;
-
-    font-weight:700;
-
-    padding:18px 40px;
-
-    border-radius:50px;
-
-    transition:
-        transform .35s ease,
-        box-shadow .35s ease;
-
-    box-shadow:
-        0 10px 25px rgba(0,0,0,.20);
-
-}
-
-.button:hover{
+.modal-button:hover{
 
     transform:translateY(-3px);
 
-    box-shadow:
-        0 18px 35px rgba(0,0,0,.30);
+    box-shadow:0 10px 25px rgba(212,175,55,.45);
 
 }
-
-
