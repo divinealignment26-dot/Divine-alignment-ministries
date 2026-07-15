@@ -40,9 +40,23 @@
 
 <section class="hero">
 
+    <img
+        src="images/banner.png"
+        alt="Divine Alignment Ministries"
+        class="hero-image">
+
+    <div class="hero-overlay">
+
+        <a href="#ministries" class="hero-button">
+
+            Begin Your Journey
+
+        </a>
+
+    </div>
 
 </section>
-
+</section>
 <section class="welcome">
 
     <h2>
@@ -68,7 +82,7 @@
 
     <div class="ministry-grid">
 
-    <div class="ministry-card" data-ministry="more">
+    <div class="ministry-card" data-ministry="worship">
 
     <h3> Worship & The Word™</h3>
 
@@ -108,7 +122,7 @@
 
         </div>
 
-        <div class="ministry-card" data-ministry="media">
+        <div class="ministry-card" data-ministry="prayer">
 
             <h3>Prayer</h3>
 
@@ -128,7 +142,7 @@
 
         </div>
 
-        <div class="ministry-card" data-ministry="prayer">
+        <div class="ministry-card" data-ministry="give">
 
             <h3>Give</h3>
 
@@ -168,7 +182,7 @@
 
         </div>
 
-        <div class="ministry-card" data-ministry="give">
+        <div class="ministry-card" data-ministry="more">
 
             <h3>Explore More Ministries</h3>
 
@@ -222,13 +236,15 @@
 MINISTRY MODAL
 =======================================================-->
 
-<div class="ministry-modal" id="ministryModal">
+<div class="modal-body">
 
-    <div class="modal-content">
+<button class="close-modal" id="closeModal">
+    <span>&times;</span>
+</button>
 
-        <button class="close-modal" id="closeModal">
-            ×
-        </button>
+<!-- LEFT PANEL -->
+
+    <div class="modal-left">
 
         <h2 id="modalTitle">
             Worship & The Word™
@@ -244,92 +260,41 @@ MINISTRY MODAL
 
         </div>
 
-     
-</div>
+        <p id="modalDescription">
 
-<footer>
-
-<footer>
-
-<div class="footer-container">
-
-    <div class="footer-column footer-brand">
-
-        <h3>Divine Alignment Ministries™</h3>
-
-        <p class="footer-tagline">
-
-            Where Heaven and Earth Agree
+            Description goes here.
 
         </p>
 
-        <p class="footer-mission">
+        <a
+            id="modalButton"
+            class="modal-button"
+            href="#">
 
-            We exist to lead people into a deeper relationship with Christ through biblical teaching, authentic conversations, worship, prayer, and creative media that inspires lives to live in divine alignment with God's purpose.
+            Enter Ministry
 
-        </p>
+        </a>
 
-       <h4>Connect With Us</h4>
+    </div>
 
-<div class="social-links">
+    <!-- RIGHT PANEL -->
 
-    <a href="https://www.facebook.com/DivineAlignmentMinistries/" target="_blank">
-        Facebook
-    </a>
+<div class="modal-right">
 
-    <a href="https://www.youtube.com/channel/UCT33FT4cdGSXzJkF5nmj4OQ" target="_blank">
-        YouTube
-    </a>
+    <div id="modalDetails">
 
-    <a href="https://www.tiktok.com/@divinealignmentmins" target="_blank">
-        TikTok
-    </a>
+        <!-- JavaScript will build this content -->
 
-    <a href="https://divinealignmentministries.org" target="_blank">
-        Website
-    </a>
-
-    <a href="mailto:divinealignment26@gmail.com">
-        Email Us
-    </a>
+    </div>
 
 </div>
 
-    </div>
+        <div class="modal-platforms">
 
+ 
     <div class="footer-column">
 
-        <h4>Discover</h4>
-
-        <a href="about.html">Our Story</a>
-        <a href="worship.html">Worship & The Word™</a>
-        <a href="conversations.html">Conversations of Faith™</a>
-        <a href="prayer.html">Prayer</a>
-
-    </div>
-
-    <div class="footer-column">
-
-        <h4>Experience</h4>
-
-        <a href="media.html">Media</a>
-        <a href="resources.html">Resources</a>
-        <a href="events.html">Events</a>
-        <a href="give.html">Give</a>
-        <a href="contact.html">Connect</a>
-
-    </div>
-
-    <div class="footer-column">
-
-        <h4>Legal & Policies</h4>
-
-        <a href="legal.html">Legal & Policies</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
-        <a href="copyright.html">Copyright Notice</a>
-        <a href="trademarks.html">Trademark Notice</a>
-
+    
     </div>
 
 </div>
@@ -359,7 +324,7 @@ MINISTRY MODAL
 
     </p>
 
-<div class="footer-bottom">
+
 
 ...
 
@@ -371,7 +336,7 @@ MINISTRY MODAL
 
 
 
-<!-- <script src="js/home.js"></script> -->
+<script src="js/home.js"></script>
 
 </body>
 

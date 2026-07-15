@@ -1406,22 +1406,16 @@ HOME MINISTRY MEDALLIONS
 
 .cross-icon{
 
-    width:48px;
+    width:70px;
 
-    height:48px;
+    height:70px;
 
-    fill:#C88F17;
+    fill:#D4AF37;
 
     filter:
-        drop-shadow(0 2px 3px rgba(0,0,0,.45))
-        drop-shadow(0 0 8px rgba(255,215,120,.25));
-
-    transition:
-        transform .45s ease,
-        filter .45s ease;
+        drop-shadow(0 0 10px rgba(212,175,55,.45));
 
 }
-
 
 
 
@@ -1473,15 +1467,15 @@ MINISTRY MODAL
 
 .ministry-modal{
 
+    display:none;
+
     position:fixed;
 
     inset:0;
 
-    background:rgba(0,0,0,.70);
+    background:rgba(0,0,0,.65);
 
-    backdrop-filter:blur(8px);
-
-    display:none;
+    backdrop-filter:blur(6px);
 
     justify-content:center;
 
@@ -1489,52 +1483,57 @@ MINISTRY MODAL
 
     z-index:9999;
 
+    padding:30px;
+
 }
 
 .modal-content{
 
-    width:min(90%,650px);
+    width:min(1100px,95%);
 
     background:linear-gradient(
         180deg,
-        #15387C,
-        #0B235B
+        #10396F,
+        #0A2D5C
     );
 
-    border:2px solid var(--gold);
+    border:2px solid #D4AF37;
 
-    border-radius:30px;
+    border-radius:28px;
 
-    padding:50px;
+    overflow:hidden;
 
-    text-align:center;
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.55),
+        0 0 30px rgba(212,175,55,.20);
+
+    animation:modalFade .45s ease;
 
     position:relative;
 
-    box-shadow:
-        0 30px 80px rgba(0,0,0,.50);
+}
 
-    animation:modalFade .35s ease;
+.modal-body{
+position: relative;
+    display:grid;
+
+    grid-template-columns:40% 60%;
 
 }
 
-@keyframes modalFade{
+.modal-left{
 
-    from{
+    padding:45px 35px;
 
-        opacity:0;
+    text-align:center;
 
-        transform:translateY(25px) scale(.96);
+    border-right:1px solid rgba(212,175,55,.25);
 
-    }
+}
 
-    to{
+.modal-right{
 
-        opacity:1;
-
-        transform:translateY(0) scale(1);
-
-    }
+    padding:45px;
 
 }
 
@@ -1544,13 +1543,13 @@ MINISTRY MODAL
 
     top:20px;
 
-    right:25px;
+    right:20px;
 
     background:none;
 
     border:none;
 
-    color:white;
+    color:#D4AF37;
 
     font-size:2rem;
 
@@ -1564,33 +1563,49 @@ MINISTRY MODAL
 
     margin-bottom:20px;
 
-    font-size:2rem;
+}
+
+.modal-content h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:2px;
+
+    margin:18px auto;
+
+    background:#D4AF37;
 
 }
 
 .modal-cross{
 
-    margin:25px 0;
+    margin:30px 0;
 
 }
 
-.modal-cross .cross-icon{
+.cross-icon{
 
-    width:65px;
+    width:70px;
 
-    height:65px;
+    height:70px;
+
+    fill:#D4AF37;
+
+    filter:drop-shadow(0 0 10px rgba(212,175,55,.40));
 
 }
 
 #modalDescription{
 
-    color:#EAEAEA;
+    color:#ECECEC;
 
     line-height:1.8;
 
-    margin-bottom:35px;
-
-    font-size:1.05rem;
+    margin:30px 0;
 
 }
 
@@ -1600,13 +1615,17 @@ MINISTRY MODAL
 
     padding:15px 40px;
 
-    background:var(--metallic-gold);
-
-    color:#081B4B;
+    border-radius:40px;
 
     text-decoration:none;
 
-    border-radius:50px;
+    background:linear-gradient(
+        180deg,
+        #FFE89A,
+        #D4AF37
+    );
+
+    color:#0A2D5C;
 
     font-weight:bold;
 
@@ -1618,6 +1637,212 @@ MINISTRY MODAL
 
     transform:translateY(-3px);
 
-    box-shadow:0 10px 25px rgba(212,175,55,.45);
+}
+
+.modal-right h3{
+
+    color:#D4AF37;
+
+    margin-bottom:20px;
+
+    font-size:1.8rem;
+
+}
+
+.modal-right h4{
+
+    color:#D4AF37;
+
+    margin:25px 0 10px;
+
+}
+
+.modal-right p{
+
+    color:#ECECEC;
+
+    line-height:1.8;
+
+}
+
+.modal-platforms{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:16px;
+
+    margin-top:30px;
+
+}
+
+.modal-platforms a{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:170px;
+
+    height:48px;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+    letter-spacing:.4px;
+
+    color:#0A2D5C;
+
+    background:
+        linear-gradient(
+            180deg,
+            #FFF8D8 0%,
+            #F6E18D 18%,
+            #D4AF37 48%,
+            #B8860B 76%,
+            #8A6913 100%
+        );
+
+    box-shadow:
+        inset 0 2px 2px rgba(255,255,255,.65),
+        inset 0 -2px 3px rgba(0,0,0,.25),
+        0 8px 18px rgba(0,0,0,.30);
+
+    transition:all .3s ease;
+
+}
+
+.modal-platforms a:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        inset 0 2px 2px rgba(255,255,255,.75),
+        inset 0 -2px 3px rgba(0,0,0,.30),
+        0 14px 26px rgba(212,175,55,.40);
+
+}
+
+
+/*======================================================
+HOME HERO
+======================================================*/
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    background:var(--midnight-blue);
+
+}
+
+.hero-image{
+
+    display:block;
+
+    width:100%;
+
+    animation:heroZoom 28s ease-in-out infinite alternate;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:50px;
+
+    transform:translateX(-50%);
+
+}
+
+.hero-button{
+
+    display:inline-block;
+
+    padding:18px 46px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    color:var(--midnight-blue);
+
+    background:linear-gradient(
+        to bottom,
+        #ffe89d,
+        var(--metallic-gold)
+    );
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.45),
+        0 0 25px rgba(212,175,55,.45);
+
+    transition:.35s;
+
+}
+
+.hero-button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.45),
+        0 0 35px rgba(212,175,55,.60);
+
+}
+
+@keyframes heroZoom{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.02);
+
+    }
+
+}
+@keyframes modalFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
 
 }
