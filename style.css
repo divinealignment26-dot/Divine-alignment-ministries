@@ -1487,7 +1487,7 @@ MINISTRY MODAL
 
 }
 
-.modal-content{
+.modal-body{
 
     width:min(1100px,95%);
 
@@ -1511,15 +1511,13 @@ MINISTRY MODAL
 
     position:relative;
 
-}
-
-.modal-body{
-position: relative;
     display:grid;
 
     grid-template-columns:40% 60%;
 
 }
+
+
 
 .modal-left{
 
@@ -1557,7 +1555,7 @@ position: relative;
 
 }
 
-.modal-content h2{
+.modal-body h2{
 
     color:white;
 
@@ -1565,7 +1563,9 @@ position: relative;
 
 }
 
-.modal-content h2::after{
+
+
+.modal-body h2::after{
 
     content:"";
 
