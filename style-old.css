@@ -1188,19 +1188,35 @@ ABOUT PAGE
 
 }
 
+.story-section h1,
 .story-section h2{
+
+    background:var(--metallic-gold);
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    color:transparent;
 
     text-align:center;
 
-    font-size:2.75rem;
+    font-size:3.25rem;
 
     font-weight:700;
 
-    margin-bottom:25px;
+    margin:0 auto 25px;
 
 }
 
 .story-section p{
+
+    max-width:900px;
+
+    margin:0 auto 35px;
+
+    text-align:center;
 
     color:rgba(255,255,255,.92);
 
@@ -1208,9 +1224,8 @@ ABOUT PAGE
 
     line-height:2.1;
 
-    margin-bottom:25px;
-
 }
+
 
 .story-section ul{
 

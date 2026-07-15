@@ -90,17 +90,65 @@ Zoom
 
     },
 
-    faith:{
+faith:{
 
-        title:"Conversations of Faith™",
+    title:"Conversations of Faith™",
 
-        description:"Interactive Bible discussions that explore the deeper narrative behind familiar Scriptures.",
+    description:"Join engaging Bible discussions that go beyond the surface of familiar scriptures, creating a welcoming space where questions are encouraged, truth is explored, and faith is strengthened through meaningful conversation.",
 
-        details:"",
+    link:"conversations.html",
 
-        link:"conversations.html"
+    details:`
 
-    },
+<h3>Conversations of Faith™</h3>
+
+<p>
+
+Where questions become conversations and Scripture becomes personal.
+
+Every Thursday we gather to explore God's Word together in an atmosphere that is welcoming, engaging, and centered on biblical truth.
+
+Whether you're new to the Bible or have studied it for years, there's always a seat waiting for you.
+
+</p>
+
+<h4>Weekly Gathering</h4>
+
+<p>
+
+Thursdays @ 6:00 PM CST
+
+<br>
+
+Live via Zoom
+
+</p>
+
+<h4>Scripture Focus</h4>
+
+<p>
+
+"Come now, and let us reason together, saith the Lord..."
+
+<br><br>
+
+<strong>Isaiah 1:18 (KJV)</strong>
+
+</p>
+
+<div class="modal-platforms">
+
+<a href="https://zoom.us/j/7035318342" target="_blank">
+
+Join Zoom
+
+</a>
+
+</div>
+
+`,
+
+},
 
     prayer:{
 
@@ -157,47 +205,51 @@ ministryCards.forEach(card=>{
 
     card.addEventListener("click",()=>{
 
-        const key = card.dataset.ministry;
+const key = card.dataset.ministry;
 
-        modalTitle.textContent = ministryInfo[key].title;
+console.log(key);
 
-        modalDescription.textContent = ministryInfo[key].description;
-        document.getElementById("modalDetails").innerHTML =
-ministryInfo[key].details;
+modalTitle.textContent = ministryInfo[key].title;
 
-    if(key==="more"){
+modalDescription.textContent = ministryInfo[key].description;
 
-    modalButton.textContent="Coming Soon";
+document.getElementById("modalDetails").innerHTML =
+    ministryInfo[key].details || "";
+
+if (key === "more") {
+
+    modalButton.textContent = "Coming Soon";
 
     modalButton.removeAttribute("href");
 
-}else{
+} else {
 
-    modalButton.textContent="Enter Ministry";
+    modalButton.textContent = "Enter Ministry";
 
-    modalButton.href=ministryInfo[key].link;
+    modalButton.href = ministryInfo[key].link;
 
 }
 
-        ministryModal.style.display="flex";
+ministryModal.style.display = "flex";
+
+    ministryModal.style.display = "flex";
 
     });
 
 });
 
 
-closeModal.addEventListener("click",()=>{
+closeModal.addEventListener("click", () => {
 
-    ministryModal.style.display="none";
+    ministryModal.style.display = "none";
 
 });
 
+ministryModal.addEventListener("click", (e) => {
 
-ministryModal.addEventListener("click",(e)=>{
+    if (e.target === ministryModal) {
 
-    if(e.target===ministryModal){
-
-        ministryModal.style.display="none";
+        ministryModal.style.display = "none";
 
     }
 
