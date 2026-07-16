@@ -3045,3 +3045,118 @@ MINISTRY CALENDAR
     box-shadow:0 18px 40px rgba(0,0,0,.35);
 
 }
+/*==================================================
+RESOURCE LIBRARY
+==================================================*/
+
+.resource-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+    margin-top:50px;
+
+}
+
+.resource-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(212,175,55,.25);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.resource-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#D4AF37;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.resource-card h3{
+
+    color:#D4AF37;
+
+    margin-bottom:15px;
+
+    font-size:2rem;
+
+}
+
+.resource-card p{
+
+    margin-bottom:20px;
+
+}
+
+.resource-free{
+
+    display:inline-block;
+
+    background:#1d7f3f;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:40px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+.resource-member{
+
+    display:inline-block;
+
+    background:rgba(212,175,55,.15);
+
+    border:1px solid #D4AF37;
+
+    color:#D4AF37;
+
+    padding:8px 18px;
+
+    border-radius:40px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+.resource-cover{
+
+    width:100%;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+    border:2px solid rgba(212,175,55,.25);
+
+    transition:.3s ease;
+
+}
+
+.resource-card:hover .resource-cover{
+
+    transform:scale(1.03);
+
+    border-color:#D4AF37;
+
+}
