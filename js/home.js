@@ -1,7 +1,12 @@
-alert("HOME JS IS LOADED");
+//======================================================
+// HOME PAGE
+// Divine Alignment Ministries™
+//======================================================
+
+console.log("Divine Alignment Ministries™ Home Loaded");
 
 //======================================================
-// MINISTRY MODALS
+// DOM ELEMENTS
 //======================================================
 
 const ministryCards = document.querySelectorAll(".ministry-card");
@@ -12,26 +17,39 @@ const modalTitle = document.getElementById("modalTitle");
 
 const modalDescription = document.getElementById("modalDescription");
 
+const modalDetails = document.getElementById("modalDetails");
+
 const modalButton = document.getElementById("modalButton");
 
 const closeModal = document.getElementById("closeModal");
 
+//======================================================
+// MINISTRY INFORMATION
+//======================================================
 
 const ministryInfo = {
 
-    worship:{
+    worship: {
 
-        title:"Worship & The Word™",
+        title: "Worship & The Word™",
 
-        description:"Where worship becomes more than music and the Word becomes more than information.",
+        description: "Experience worship, biblical teaching, and encouragement that strengthens your faith and draws you closer to Jesus Christ.",
 
-details:`
+        buttonText: "Enter Ministry",
 
-<h3>Worship & The Word™</h3>
+        link: "worship.html",
+
+        details: `
+
+<h3>Worship &amp; The Word™</h3>
 
 <p>
 
-Worship & The Word™ is where hearts are lifted in worship, lives are strengthened through biblical teaching, and believers are equipped to live out God's Word every day. Every service is centered on Jesus Christ, creating an atmosphere where faith grows, hope is renewed, and lives are transformed through His presence.
+Worship &amp; The Word™ is where hearts are lifted in worship, lives are
+strengthened through biblical teaching, and believers are equipped to
+live out God's Word every day. Every gathering is centered on Jesus
+Christ, creating an atmosphere where faith grows, hope is renewed, and
+lives are transformed through His presence.
 
 </p>
 
@@ -39,7 +57,11 @@ Worship & The Word™ is where hearts are lifted in worship, lives are strengthe
 
 <h4>Weekly Gathering</h4>
 
-<p><strong>Sundays @ 7:00 PM</strong></p>
+<p>
+
+<strong>Sundays @ 7:00 PM</strong>
+
+</p>
 
 </div>
 
@@ -49,11 +71,19 @@ Worship & The Word™ is where hearts are lifted in worship, lives are strengthe
 
 <p>
 
-<i>"Let the word of Christ dwell in you richly in all wisdom; teaching and admonishing one another in psalms and hymns and spiritual songs, singing with grace in your hearts to the Lord."</i>
+<i>
+"Let the word of Christ dwell in you richly in all wisdom; teaching and
+admonishing one another in psalms and hymns and spiritual songs,
+singing with grace in your hearts to the Lord."
+</i>
 
 </p>
 
-<p><strong>Colossians 3:16 (KJV)</strong></p>
+<p>
+
+<strong>Colossians 3:16 (KJV)</strong>
+
+</p>
 
 </div>
 
@@ -84,39 +114,45 @@ Zoom
 </a>
 
 </div>
-`,
 
-        link:"worship.html"
+`
 
     },
+    faith: {
 
-faith:{
+        title: "Conversations of Faith™",
 
-    title:"Conversations of Faith™",
+        description: "Explore Scripture through meaningful conversations that encourage questions, deepen understanding, and strengthen your walk with Christ.",
 
-    description:"Join engaging Bible discussions that go beyond the surface of familiar scriptures, creating a welcoming space where questions are encouraged, truth is explored, and faith is strengthened through meaningful conversation.",
+        buttonText: "Join the Conversation",
 
-    link:"conversations.html",
+        link: "conversations.html",
 
-    details:`
+        details: `
 
 <h3>Conversations of Faith™</h3>
 
 <p>
 
-Where questions become conversations and Scripture becomes personal.
+Conversations of Faith™ is a place where questions become conversations
+and Scripture becomes personal. Every session invites believers to go
+beyond the surface of familiar passages, discover deeper biblical
+truths, and grow together through open discussion and Spirit-led
+teaching.
 
-Every Thursday we gather to explore God's Word together in an atmosphere that is welcoming, engaging, and centered on biblical truth.
-
-Whether you're new to the Bible or have studied it for years, there's always a seat waiting for you.
+Whether you're new to studying the Bible or have spent years in God's
+Word, you'll find a welcoming environment where every question matters
+and every conversation points back to Christ.
 
 </p>
+
+<div class="modal-schedule">
 
 <h4>Weekly Gathering</h4>
 
 <p>
 
-Thursdays @ 6:00 PM CST
+<strong>Thursdays @ 6:00 PM CST</strong>
 
 <br>
 
@@ -124,17 +160,29 @@ Live via Zoom
 
 </p>
 
+</div>
+
+<div class="modal-scripture">
+
 <h4>Scripture Focus</h4>
 
 <p>
 
+<i>
+
 "Come now, and let us reason together, saith the Lord..."
 
-<br><br>
+</i>
+
+</p>
+
+<p>
 
 <strong>Isaiah 1:18 (KJV)</strong>
 
 </p>
+
+</div>
 
 <div class="modal-platforms">
 
@@ -146,110 +194,200 @@ Join Zoom
 
 </div>
 
-`,
-
-},
-
-    prayer:{
-
-        title:"Prayer",
-
-        description:"Prayer changes everything.",
-
-        details:"",
-
-        link:"prayer.html"
+`
 
     },
 
-    resources:{
+    prayer: {
 
-        title:"Resources",
+        title: "Prayer Ministry",
 
-        description:"Tools to strengthen your walk with Christ.",
+        description: "Submit a prayer request and stand with believers in prayer, trusting God to bring wisdom, healing, strength, and peace.",
 
-        details:"",
+        buttonText: "Submit a Prayer Request",
 
-        link:"resources.html"
+        link: "prayer.html",
+
+        details: `
+
+<h3>Prayer Ministry</h3>
+
+<p>
+
+Prayer is the heartbeat of Divine Alignment Ministries™. Whether you're celebrating God's faithfulness, seeking direction, or walking through a difficult season, you never have to pray alone. We believe God hears, God cares, and God still answers prayer.
+
+</p>
+
+<div class="modal-schedule">
+
+<h4>Prayer Opportunities</h4>
+
+<p>
+
+Prayer requests may be submitted anytime. Join us as we seek God's guidance, healing, wisdom, strength, and peace together.
+
+</p>
+
+</div>
+
+<div class="modal-scripture">
+
+<h4>Scripture Focus</h4>
+
+<p><i>"The effectual fervent prayer of a righteous man availeth much."</i></p>
+
+<p><strong>James 5:16 (KJV)</strong></p>
+
+</div>
+
+<div class="modal-platforms">
+
+<a href="prayer.html">
+
+Submit a Prayer Request
+
+</a>
+
+</div>
+
+`
 
     },
 
-    give:{
+    resources: {
 
-        title:"Give",
+        title: "Resources",
 
-        description:"Partner with Divine Alignment Ministries.",
+        description: "Bible studies, devotionals, teaching materials, and resources to help you grow in your walk with Christ.",
 
-        details:"",
+        buttonText: "Explore Resources",
 
-        link:"give.html"
+        link: "resources.html",
+
+        details: `
+
+...YOUR RESOURCES HTML...
+
+`
+
+    },
+    give: {
+
+        title: "Support the Ministry",
+
+        description: "Partner with Divine Alignment Ministries™ as we share the Gospel through worship, biblical teaching, outreach, and media.",
+
+        buttonText: "Give Securely",
+
+        link: "give.html",
+
+        details: `
+
+...YOUR GIVE HTML...
+
+`
 
     },
 
-    more:{
+    more: {
 
-        title:"Explore More Ministries",
+        title: "More Ministries",
 
-        description:"Additional ministries are prayerfully being prepared.",
+        description: "See what God is continuing to build through Divine Alignment Ministries™.",
 
-        details:"",
+        buttonText: "Explore Our Ministries",
 
-        link:"#"
+        link: "ministries.html",
+
+        details: `
+
+...YOUR MORE HTML...
+
+`
 
     }
 
 };
 
 
-ministryCards.forEach(card=>{
+//======================================================
+// MODAL FUNCTIONS
+//======================================================
 
-    card.addEventListener("click",()=>{
-
-const key = card.dataset.ministry;
-
-console.log(key);
-
-modalTitle.textContent = ministryInfo[key].title;
-
-modalDescription.textContent = ministryInfo[key].description;
-
-document.getElementById("modalDetails").innerHTML =
-    ministryInfo[key].details || "";
-
-if (key === "more") {
-
-    modalButton.textContent = "Coming Soon";
-
-    modalButton.removeAttribute("href");
-
-} else {
-
-    modalButton.textContent = "Enter Ministry";
-
-    modalButton.href = ministryInfo[key].link;
-
+function openModal() {
+    ministryModal.style.display = "flex";
 }
 
-ministryModal.style.display = "flex";
+function closeMinistryModal() {
+    ministryModal.style.display = "none";
+}
 
-    ministryModal.style.display = "flex";
+//======================================================
+// MINISTRY CARD EVENTS
+//======================================================
+
+ministryCards.forEach((card) => {
+
+    card.addEventListener("click", () => {
+
+        const key = card.dataset.ministry;
+        const ministry = ministryInfo[key];
+
+        if (!ministry) return;
+
+        modalTitle.textContent = ministry.title;
+        modalDescription.textContent = ministry.description;
+        modalDetails.innerHTML = ministry.details;
+
+        modalButton.textContent = ministry.buttonText || "Learn More";
+
+        if (ministry.link) {
+
+            modalButton.href = ministry.link;
+            modalButton.style.display = "inline-block";
+
+        } else {
+
+            modalButton.removeAttribute("href");
+            modalButton.style.display = "none";
+
+        }
+
+        openModal();
 
     });
 
 });
 
+//======================================================
+// CLOSE BUTTON
+//======================================================
 
-closeModal.addEventListener("click", () => {
+closeModal.addEventListener("click", closeMinistryModal);
 
-    ministryModal.style.display = "none";
+//======================================================
+// CLOSE WHEN CLICKING OUTSIDE THE MODAL
+//======================================================
+
+ministryModal.addEventListener("click", (event) => {
+
+    if (event.target === ministryModal) {
+
+        closeMinistryModal();
+
+    }
 
 });
 
-ministryModal.addEventListener("click", (e) => {
+//======================================================
+// CLOSE WITH ESC KEY
+//======================================================
 
-    if (e.target === ministryModal) {
+document.addEventListener("keydown", (event) => {
 
-        ministryModal.style.display = "none";
+    if (event.key === "Escape") {
+
+        closeMinistryModal();
 
     }
 
