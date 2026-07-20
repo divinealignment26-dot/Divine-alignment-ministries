@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Media | Divine Alignment Ministries™</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!--=====================================================
+HEADER
+======================================================-->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                Divine Alignment Ministries™
+
+            </a>
+
+        </div>
+
+        <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle Navigation"
+            aria-expanded="false"
+            aria-controls="navLinks">
+
+            ☰
+
+        </button>
+
+        <nav
+            class="navbar"
+            aria-label="Primary Navigation">
+
+            <div
+                class="nav-links"
+                id="navLinks">
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">Our Story</a>
+
+                <a href="worship.html">Worship &amp; The Word™</a>
+
+                <a href="conversations.html">Conversations of Faith™</a>
+
+                <a href="media.html" class="active">Media</a>
+
+                <a href="resources.html">Resources</a>
+
+                <a href="prayer.html">Prayer</a>
+
+                <a href="events.html">Events</a>
+
+                <a href="give.html">Give</a>
+
+                <a href="contact.html">Connect</a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<main>
+
+<!-- ======================================================
+MEDIA HERO
+======================================================= -->
+
+<section class="media-hero">
+
+    <div class="hero-content">
+
+        <p class="hero-kicker">
+            Welcome To
+        </p>
+
+        <h1 class="hero-title">
+            Divine Alignment Media
+        </h1>
+
+        <p class="hero-subtitle">
+
+            One destination for worship, music, television, radio,
+            podcasts, biblical teaching, and original content from
+            Divine Alignment Ministries™.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="primary-button">
+                Start Listening
+            </button>
+
+            <button class="secondary-button">
+                Watch Live TV
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+MEDIA NAVIGATION
+======================================================= -->
+
+<!-- ======================================================
+MEDIA NAVIGATION
+======================================================= -->
+
+<section class="media-navigation">
+
+    <button class="media-tab active">
+
+        Music
+
+    </button>
+
+    <button class="media-tab">
+
+        Radio
+
+    </button>
+
+    <button class="media-tab">
+
+        Divine Alignment TV™
+
+    </button>
+
+    <button class="media-tab">
+
+        Podcasts
+
+    </button>
+
+    <button class="media-tab">
+
+        Featured Church
+
+    </button>
+
+    <button class="media-tab">
+
+        Conversations of Faith™
+
+    </button>
+
+    <button class="media-tab">
+
+        Worship &amp; The Word™
+
+    </button>
+
+</section>
+
+<!-- ======================================================
+FEATURED CONTENT
+======================================================= -->
+
+<section class="featured-section">
+
+    <div class="featured-image">
+
+        <img
+        src="images/logo.png"
+        alt="Featured Album">
+
+    </div>
+
+    <div class="featured-details">
+
+        <p class="featured-label">
+            Featured This Week
+        </p>
+
+        <h2>
+            Christians Have Fun Too
+        </h2>
+
+        <h3>
+            Official Amberlea Davis
+        </h3>
+
+        <p>
+
+            Welcome to Divine Alignment Media.
+            Discover music, television, podcasts,
+            radio, biblical teaching, and inspiring
+            Christian content—all in one place.
+
+        </p>
+
+        <div class="featured-buttons">
+
+            <button class="primary-button">
+                Listen Now
+            </button>
+
+            <button class="secondary-button">
+                Learn More
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ======================================================
+MEDIA CONSOLE
+======================================================= -->
+
+<section class="media-console">
+
+    <!-- PLAYER -->
+
+    <section class="player-section">
+
+        <div class="media-player">
+
+            <div class="media-cover">
+
+                <img
+                id="cover"
+                src="images/logo.png"
+                alt="Album Cover">
+
+            </div>
+
+            <div class="media-information">
+
+                <p class="player-label">
+                    Now Playing
+                </p>
+
+                <h2 id="songTitle">
+                    Christians Have Fun Too
+                </h2>
+
+                <h3 id="artistName">
+                    Official Amberlea Davis
+                </h3>
+
+                <audio id="audioPlayer"></audio>
+
+                <div class="media-controls">
+
+                    <button id="previousButton">
+                        ⏮
+                    </button>
+
+                    <button id="playButton">
+                        ▶
+                    </button>
+
+                    <button id="pauseButton">
+                        ⏸
+                    </button>
+
+                    <button id="nextButton">
+                        ⏭
+                    </button>
+
+                </div>
+
+              <div class="progress-container">
+
+    <div class="time-display">
+
+        <span id="currentTime">
+            0:00
+        </span>
+
+        <span id="totalTime">
+            0:00
+        </span>
+
+    </div>
+
+<div class="progress-bar" id="progressBar">
+
+    <div class="progress-fill"></div>
+
+</div>
+
+</div>
+                    <div class="volume-container">
+
+    <span>🔊</span>
+
+    <input
+        type="range"
+        id="volumeSlider"
+        min="0"
+        max="100"
+        value="100">
+
+</div>
+
+   
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PLAYLIST -->
+
+    <aside class="playlist-section">
+
+        <div class="playlist">
+
+            <div class="playlist-header">
+
+                <h2>
+                    Content Queue
+                </h2>
+
+                <p>
+                    What's coming up next.
+                </p>
+
+            </div>
+
+            <div id="playlist">
+
+                <!-- JavaScript builds playlist -->
+
+            </div>
+
+        </div>
+
+    </aside>
+
+</section>
+<!-- ======================================================
+DIVINE ALIGNMENT TV™
+======================================================= -->
+
+<section class="content-section" id="tv-section">
+
+    <div class="section-header">
+
+        <p class="featured-label">
+
+            Divine Alignment TV™
+
+        </p>
+
+        <h2>
+
+            Watch Live
+
+        </h2>
+
+    </div>
+
+    <div class="video-container">
+
+        <!-- Replace src with your YouTube Live stream or playlist -->
+
+        <iframe
+            width="100%"
+            height="400"
+            src="https://www.youtube.com/embed/jfKfPfyJRdk"
+            title="Divine Alignment TV™"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+
+        </iframe>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+PODCASTS
+======================================================= -->
+
+<section class="content-section" id="podcast-section">
+
+    <div class="section-header">
+
+        <p class="featured-label">
+            Podcasts
+        </p>
+
+        <h2>Latest Episodes</h2>
+
+    </div>
+
+    <div class="card-grid">
+
+        <div class="content-card">
+
+            <h3>Coming Soon</h3>
+
+            <p>
+                Podcast episodes will appear here.
+            </p>
+
+        </div>
+
+        <div class="content-card">
+
+            <h3>Coming Soon</h3>
+
+            <p>
+                Podcast episodes will appear here.
+            </p>
+
+        </div>
+
+        <div class="content-card">
+
+            <h3>Coming Soon</h3>
+
+            <p>
+                Podcast episodes will appear here.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+FEATURED CHURCH
+======================================================= -->
+
+<section class="content-section" id="church-section">
+
+    <div class="section-header">
+
+        <p class="featured-label">
+
+            Featured Church
+
+        </p>
+
+        <h2>
+
+            This Month's Ministry
+
+        </h2>
+
+    </div>
+
+    <div class="card-grid">
+
+        <div class="content-card">
+
+            <h3>
+
+                Coming Soon
+
+            </h3>
+
+            <p>
+
+                Featured churches, sermons, ministry partners, and special guests will be showcased here each month.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+CONVERSATIONS OF FAITH
+======================================================= -->
+<!-- ======================================================
+CONVERSATIONS OF FAITH™
+======================================================= -->
+
+<section class="content-section" id="cof-section">
+
+    <div class="section-header">
+
+        <p class="featured-label">
+
+            Conversations of Faith™
+
+        </p>
+
+        <h2>
+
+            Current Series
+
+        </h2>
+
+    </div>
+
+    <div class="card-grid">
+
+        <div class="content-card">
+
+            <h3>
+
+                The Narrative
+
+            </h3>
+
+            <p>
+
+                Bible studies, discussion guides, downloadable resources, and teaching videos designed to help you discover what lies beneath familiar Scriptures.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+WORSHIP & THE WORD™
+======================================================= -->
+
+<section class="content-section" id="worship-section">
+
+    <div class="section-header">
+
+        <p class="featured-label">
+
+            Worship &amp; The Word™
+
+        </p>
+
+        <h2>
+
+            Latest Messages
+
+        </h2>
+
+    </div>
+
+    <div class="card-grid">
+
+        <div class="content-card">
+
+            <h3>
+
+                Coming Soon
+
+            </h3>
+
+            <p>
+
+                Weekly worship services, biblical teaching, and ministry messages will be available here as new content is released.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!--=====================================================
+FOOTER
+======================================================-->
+
+<footer>
+
+    <div class="footer-container">
+
+        <!--==============================
+        MINISTRY BRAND
+        ==============================-->
+
+        <div class="footer-brand">
+
+            <h2>
+
+                Divine Alignment Ministries™
+
+            </h2>
+
+            <p class="footer-tagline">
+
+                Where Heaven and Earth Agree
+
+            </p>
+
+            <p class="footer-description">
+
+                Discover truth, strengthen your faith, and live in Divine Alignment through worship, biblical teaching, prayer, authentic conversations, discipleship, and Christ-centered media.
+
+            </p>
+
+            <a
+                href="about.html"
+                class="footer-button">
+
+                Learn More About Us
+
+            </a>
+
+        </div>
+
+        <!--==============================
+        QUICK LINKS
+        ==============================-->
+
+        <div class="footer-links">
+
+            <div class="footer-column">
+
+                <h3>
+
+                    Ministry
+
+                </h3>
+
+                <a href="about.html">Our Story</a>
+                <a href="worship.html">Worship &amp; The Word™</a>
+                <a href="conversations.html">Conversations of Faith™</a>
+                <a href="prayer.html">Prayer</a>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>
+
+                    Explore
+
+                </h3>
+
+                <a href="media.html">Media</a>
+                <a href="resources.html">Resources</a>
+                <a href="events.html">Events</a>
+                <a href="give.html">Give</a>
+                <a href="contact.html">Connect</a>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>
+
+                    Information
+
+                </h3>
+
+                <a href="legal.html">Privacy Policy</a>
+                <a href="legal.html">Terms of Use</a>
+                <a href="legal.html">Copyright Notice</a>
+                <a href="legal.html">Trademark Notice</a>
+
+            </div>
+
+        </div>
+
+        <!--==============================
+        COPYRIGHT
+        ==============================-->
+
+        <div class="footer-bottom">
+
+            <p class="footer-slogan">
+
+                Discover Truth • Strengthen Faith • Live in Divine Alignment
+
+            </p>
+
+            <p>
+
+                Building Faith. Inspiring Hope. Transforming Lives.
+
+            </p>
+
+            <p>
+
+                © 2026 Divine Alignment Ministries™. All Rights Reserved.
+
+            </p>
+
+            <p>
+
+                Website Designed &amp; Published by
+                <strong>B4A Media Group™</strong>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="js/player.js"></script>
+
+<script src="js/player.js"></script>
+
+<!--=====================================================
+BACK TO TOP
+======================================================-->
+
+<button id="backToTop" title="Back to Top">
+
+    ↑
+
+</button>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
