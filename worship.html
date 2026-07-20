@@ -39,118 +39,150 @@
 
 <body>
 
-<!--=====================================================
-HEADER
-======================================================-->
+<!--=========================================================
+    SITE HEADER
+==========================================================-->
 
-<header class="site-header">
+<header
+    class="site-header"
+    role="banner">
 
-    <div class="header-container">
+    <nav
+        class="navbar"
+        aria-label="Primary Navigation">
 
         <div class="logo">
 
-            <a href="index.html">
+            <a
+                href="index.html"
+                aria-label="Divine Alignment Ministries Home">
 
-                Divine Alignment Ministries™
+                <h1>Divine Alignment Ministries™</h1>
+
+                <p class="tagline">
+                    Where Heaven and Earth Agree
+                </p>
 
             </a>
 
         </div>
 
         <button
-            class="hamburger"
             id="hamburger"
-            aria-label="Toggle Navigation"
+            class="hamburger"
+            type="button"
+            aria-label="Open navigation menu"
             aria-expanded="false"
-            aria-controls="navLinks">
+            aria-controls="primary-navigation">
 
-            ☰
+            <span aria-hidden="true">☰</span>
 
         </button>
 
-        <nav
-            class="navbar"
-            aria-label="Primary Navigation">
+        <div
+            class="nav-links"
+            id="primary-navigation">
 
-            <div
-                class="nav-links"
-                id="navLinks">
+            <a href="index.html">
+                Home
+            </a>
 
-                <a href="index.html">Home</a>
-                <a href="about.html">Our Story</a>
-                <a href="worship.html" class="active">Worship &amp; The Word™</a>
-                <a href="conversations.html">Conversations of Faith™</a>
-                <a href="media.html">Media</a>
-                <a href="resources.html">Resources</a>
-                <a href="prayer.html">Prayer</a>
-                <a href="events.html">Events</a>
-                <a href="give.html">Give</a>
-                <a href="contact.html">Connect</a>
+            <a href="about.html">
+                Our Story
+            </a>
 
-            </div>
+            <a href="beliefs.html">
+                Our Beliefs
+            </a>
 
-        </nav>
+            <a
+                href="worship.html"
+                class="active"
+                aria-current="page">
 
-    </div>
+                Worship &amp; The Word™
+
+            </a>
+
+            <a href="conversations.html">
+                Conversations of Faith™
+            </a>
+
+            <a href="media.html">
+                Media
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="prayer.html">
+                Prayer
+            </a>
+
+            <a href="events.html">
+                Events
+            </a>
+
+            <a href="give.html">
+                Give
+            </a>
+
+            <a href="contact.html">
+                Connect
+            </a>
+
+        </div>
+
+    </nav>
 
 </header>
 
 <main>
 
-<!--=====================================================
-HERO
-======================================================-->
+<!--=========================================================
+    PAGE HERO
+==========================================================-->
 
-<section class="hero page-hero">
+<section class="page-hero">
 
-    <div class="hero-overlay">
+    <div class="page-hero-content">
 
-        <div class="hero-content">
+        <span class="page-kicker">
+            GROW DEEPER IN GOD'S WORD
+        </span>
 
-            <span class="hero-subtitle">
+        <h1>Worship &amp; The Word™</h1>
 
-                Divine Alignment Ministries™
+        <div class="hero-divider"></div>
 
-            </span>
+        <p>
+            Join us for meaningful worship, biblical teaching, prayer, and authentic fellowship as we seek God's presence together. Every gathering is designed to strengthen your faith, deepen your understanding of Scripture, and encourage you to walk each day in Divine Alignment with Christ.
+        </p>
 
-            <h1>
+        <div class="hero-buttons">
 
-                Worship &amp; The Word™
+            <a
+                href="events.html"
+                class="btn btn-primary">
 
-            </h1>
+                Join Us
 
-            <p>
+            </a>
 
-                Experience heartfelt worship, biblical teaching, prayer, and authentic fellowship as we grow together in Christ and live in Divine Alignment through the truth of God's Word.
+            <a
+                href="contact.html"
+                class="btn btn-secondary">
 
-            </p>
+                Ask a Question
 
-            <div class="hero-buttons">
-
-                <a
-                    href="events.html"
-                    class="primary-btn">
-
-                    Join Us
-
-                </a>
-
-                <a
-                    href="contact.html"
-                    class="secondary-btn">
-
-                    Ask a Question
-
-                </a>
-
-            </div>
+            </a>
 
         </div>
 
     </div>
 
 </section>
-
 <!--=====================================================
 WELCOME
 ======================================================-->
