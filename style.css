@@ -1886,19 +1886,33 @@ MINISTRY GRID
 
     flex-direction:column;
 
-    justify-content:space-between;
+    align-items:center;
+
+    width:290px;
+
+}
+
+/*======================================================
+MINISTRY CIRCLE
+======================================================*/
+
+.ministry-circle{
+
+    display:flex;
+
+    flex-direction:column;
 
     align-items:center;
 
-    width:260px;
+    justify-content:flex-start;
 
-    height:260px;
+    width:290px;
 
-    padding:22px 20px 24px;
+    height:290px;
+
+    padding:28px 24px;
 
     text-align:center;
-
-    cursor:pointer;
 
     background:linear-gradient(
         180deg,
@@ -1919,7 +1933,7 @@ MINISTRY GRID
 
 }
 
-.ministry-card:hover{
+.ministry-circle:hover{
 
     transform:translateY(-10px);
 
@@ -1929,21 +1943,17 @@ MINISTRY GRID
 
 }
 
-.ministry-card h3{
+/*======================================================
+TITLE
+======================================================*/
 
-    display:flex;
+.ministry-circle h3{
 
-    justify-content:center;
-
-    align-items:center;
-
-    min-height:64px;
-
-    margin:0;
+    margin:0 0 16px;
 
     color:var(--white);
 
-    font-size:1.15rem;
+    font-size:1.3rem;
 
     font-weight:700;
 
@@ -1951,23 +1961,21 @@ MINISTRY GRID
 
 }
 
+/*======================================================
+CROSS
+======================================================*/
+
 .cross{
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    flex:1;
+    margin-bottom:18px;
 
 }
 
 .cross-icon{
 
-    width:70px;
+    width:42px;
 
-    height:70px;
+    height:42px;
 
     fill:var(--gold);
 
@@ -1979,22 +1987,39 @@ MINISTRY GRID
 
 }
 
-.ministry-card:hover .cross-icon{
+.ministry-circle:hover .cross-icon{
 
-    transform:scale(1.12);
-
-    filter:
-        drop-shadow(0 0 14px rgba(255,220,120,.75))
-        drop-shadow(0 0 22px rgba(255,200,80,.45));
+    transform:scale(1.08);
 
 }
+
+/*======================================================
+DESCRIPTION
+======================================================*/
+
+.ministry-description{
+
+    color:var(--white);
+
+    font-size:1rem;
+
+    line-height:1.7;
+
+    max-width:200px;
+
+}
+
+/*======================================================
+BUTTON
+======================================================*/
 
 .ministry-action{
 
-    min-width:118px;
+    margin-top:28px;
+
+    min-width:180px;
 
 }
-
 /*======================================================
 RESPONSIVE MINISTRIES
 ======================================================*/
@@ -3606,5 +3631,26 @@ SKIP TO CONTENT
 .skip-link:focus{
 
     top:20px;
+
+}
+/*======================================================
+SECTION LABEL
+======================================================*/
+
+.section-label{
+
+    display:block;
+
+    margin-bottom:20px;
+
+    color:var(--white);
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-align:center;
 
 }
